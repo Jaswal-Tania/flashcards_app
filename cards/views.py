@@ -20,11 +20,11 @@ class CardListView(ListView):
 class CardCreateView(CreateView):
     model = Card
     fields = ["question", "answer", "box"]
-    success_url = reverse_lazy("card-create")
+    success_url = reverse_lazy("card_create")
 
 
 class CardUpdateView(CardCreateView, UpdateView):
-    success_url = reverse_lazy("card-list")
+    success_url = reverse_lazy("card_list")
 
 
 class BoxView(CardListView):
